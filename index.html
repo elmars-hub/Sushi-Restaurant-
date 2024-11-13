@@ -1,0 +1,658 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Sushi Website || Tailwind CSS</title>
+
+    <link href="./src/output.css" rel="stylesheet" />
+    <script defer src="app.js"></script>
+  </head>
+  <body class="bg-backdrop font-inter">
+    <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
+    <header
+      id="navbar"
+      class="fixed left-0 top-0 z-[999] w-full bg-backdrop pt-3 md:pt-3"
+    >
+      <nav
+        class="container mx-auto flex h-16 items-center justify-between px-6"
+      >
+        <div>
+          <img src="/images/LOGO.png" alt="Logo" class="cursor-pointer" />
+        </div>
+
+        <div
+          id="nav-menu"
+          class="absolute right-[-100%] top-0 flex min-h-[100vh] w-full items-center justify-center overflow-hidden bg-backdrop shadow-lg backdrop-blur-sm duration-300 md:static md:min-h-fit md:w-auto md:bg-transparent md:shadow-none"
+        >
+          <ul class="flex flex-col items-center gap-8 md:flex-row md:gap-6">
+            <li>
+              <a
+                href="#home"
+                class="nav-link active font-semibold duration-300 md:hover:text-lightGreen"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#menu"
+                class="nav-link font-semibold duration-300 hover:text-lightGreen"
+                >Menu</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="nav-link font-semibold duration-300 hover:text-lightGreen"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="nav-link font-semibold duration-300 hover:text-lightGreen"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#offers"
+                class="nav-link font-semibold duration-300 hover:text-lightGreen"
+                >Offers</a
+              >
+            </li>
+
+            <div
+              class="mt-5 flex cursor-pointer items-center gap-2 rounded-full bg-lightGreen px-6 py-1 shadow-lg md:hidden"
+            >
+              <ion-icon
+                class="h-10 w-6 font-semibold text-white"
+                name="call-outline"
+              ></ion-icon>
+              <a href="#" class="text-white">Contact</a>
+            </div>
+          </ul>
+        </div>
+
+        <div class="hidden cursor-pointer gap-8 sm:gap-5 md:flex">
+          <div class="flex w-full items-center justify-center gap-4">
+            <ion-icon class="h-10 w-6" name="search-outline"></ion-icon>
+            <span class="relative">
+              <ion-icon class="h-10 w-6" name="bag-outline"></ion-icon>
+              <p
+                class="absolute left-[11px] top-[6px] h-[15px] w-[10px] rounded-full bg-lightGreen p-[7px] text-center text-[9px] text-red-50"
+              ></p>
+            </span>
+          </div>
+
+          <div
+            class="flex w-full items-center gap-3 rounded-full bg-lightGreen px-4"
+          >
+            <ion-icon
+              class="h-10 w-6 text-white"
+              name="call-outline"
+            ></ion-icon>
+            <a href="#" class="text-white">Contact</a>
+          </div>
+        </div>
+
+        <div class="md:hidden">
+          <ion-icon
+            name="menu-outline"
+            id="hamburger"
+            class="h-10 w-10 cursor-pointer md:hidden"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!--~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~-->
+      <section id="home" class="py-20 md:py-36">
+        <div class="container mx-auto px-8">
+          <div
+            class="mt-10 flex flex-col items-center justify-center gap-16 md:flex-row md:items-start md:gap-10 md:space-y-0 lg:gap-6"
+          >
+            <!-- Content -->
+            <div class="home__data w-full space-y-10 md:w-1/2 lg:w-1/2">
+              <h1
+                class="text-center text-4xl font-bold md:text-start md:text-3xl lg:text-4xl"
+              >
+                Sushi Bliss, Every<br />
+                Roll a Flavourful
+                <span class="text-lightGreen">Kiss</span>
+              </h1>
+
+              <p
+                class="text-center text-[20px] text-gray-500 md:mt-12 md:text-left md:text-[20px] lg:text-[22px]"
+              >
+                Masters of Maki: Elevate Your Taste Buds with Our Sushi
+                Creations, Where Tradition Meets Innovation!
+              </p>
+
+              <div
+                class="mb-5 flex items-center justify-center space-x-5 md:justify-start md:space-x-10"
+              >
+                <a
+                  href=""
+                  class="baseline rounded-full bg-lightGreen p-2 px-5 text-white shadow-2xl duration-300 hover:-translate-y-1 md:p-2 md:px-6 lg:p-4 lg:px-10"
+                  >Order Now</a
+                >
+
+                <div class="flex cursor-pointer items-center gap-1 md:gap-4">
+                  <a href="">Watch Video</a>
+                  <ion-icon
+                    class="rounded-full bg-white p-2 text-sm shadow-2xl md:p-4 md:text-2xl"
+                    name="caret-forward-outline"
+                  ></ion-icon>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div
+              class="home__image relative flex w-full flex-col items-center md:w-1/2 md:justify-end lg:w-1/2"
+            >
+              <span
+                class="md:-left[5rem] absolute left-4 top-0 z-50 rounded-full bg-white px-8 py-3 text-red-500 shadow-lg md:px-14 lg:-left-[6rem] lg:px-16 lg:py-5"
+              >
+                <p class="text-sm md:text-[14px] lg:text-[17px]">
+                  Best Sushi Ever!
+                </p>
+              </span>
+
+              <img
+                src="/images/hero.pgn.png"
+                alt="Sushi"
+                class="z-10 w-[400px] justify-start md:w-[500px] lg:w-[480px]"
+              />
+
+              <!-- Content -->
+              <div
+                class="mb-20 flex gap-6 md:absolute md:-bottom-[79px] md:mb-0 md:flex-row md:gap-10 lg:left-[46px]"
+              >
+                <!-- Content 1 -->
+                <div
+                  class="flex items-center gap-2 rounded-lg bg-white px-2 py-1 pr-14 shadow-2xl md:pr-16 lg:pr-24"
+                >
+                  <img
+                    src="/images/category 4.png"
+                    alt=""
+                    class="h-[50px] w-[50px] md:h-[50px] md:w-[50px] lg:h-[80px] lg:w-[80px]"
+                  />
+                  <div>
+                    <h4 class="text-sm font-bold">Makizushi</h4>
+                    <span class="flex gap-1">
+                      <ion-icon
+                        class="text-backdropYellow"
+                        name="star"
+                      ></ion-icon>
+                      <ion-icon
+                        class="text-backdropYellow"
+                        name="star"
+                      ></ion-icon>
+                      <ion-icon
+                        class="text-backdropYellow"
+                        name="star"
+                      ></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </span>
+                    <p class="">
+                      <span class="text-[10px] font-semibold text-orange-600"
+                        >$</span
+                      >18.00
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Content 2 -->
+                <div
+                  class="flex items-center gap-2 rounded-lg bg-white px-2 py-1 pr-14 shadow-2xl md:pr-16 lg:pr-24"
+                >
+                  <img
+                    src="/images/category.png"
+                    alt=""
+                    class="h-[50px] w-[50px] md:h-[50px] md:w-[50px] lg:h-[80px] lg:w-[80px]"
+                  />
+                  <div>
+                    <h4 class="text-sm font-bold">California roll</h4>
+                    <span class="flex gap-1">
+                      <ion-icon
+                        class="text-backdropYellow"
+                        name="star"
+                      ></ion-icon>
+                      <ion-icon
+                        class="text-backdropYellow"
+                        name="star"
+                      ></ion-icon>
+                      <ion-icon
+                        class="text-backdropYellow"
+                        name="star"
+                      ></ion-icon>
+                      <ion-icon
+                        class="text-backdropYellow"
+                        name="star"
+                      ></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </span>
+                    <p>
+                      <span class="text-[10px] font-semibold text-orange-600"
+                        >$</span
+                      >23.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Categories ~~~~~~~~~~~~~~~-->
+      <div class="category__data py-16 md:py-20">
+        <div class="container mx-auto px-10">
+          <h2
+            class="category__data mb-3 text-center text-sm font-semibold uppercase text-backdropRed"
+          >
+            Customers Favourite
+          </h2>
+          <h1 class="category__data mb-3 text-center text-3xl font-bold">
+            Popular Categories
+          </h1>
+          <div
+            class="mt-5 flex flex-col flex-wrap items-center justify-center gap-14 md:flex-row"
+          >
+            <div
+              class="flex flex-col items-center rounded-2xl bg-white p-5 px-14 py-6 shadow-lg"
+            >
+              <img
+                class="category__img w-24 rounded-full bg-backdropBlue px-2 py-4"
+                src="/images/category.png"
+                alt=""
+              />
+              <h3 class="font-semibold">Main Dish</h3>
+              <p>(86 dishes)</p>
+            </div>
+            <div
+              class="flex flex-col items-center rounded-2xl bg-white p-5 px-14 py-6 shadow-lg"
+            >
+              <img
+                class="category__img w-20 rounded-full bg-backdropBlue px-2 py-4"
+                src="/images/category 2.png"
+                alt=""
+              />
+              <h3 class="font-semibold">Break Fast</h3>
+              <p>(12 break fast)</p>
+            </div>
+            <div
+              class="flex flex-col items-center rounded-2xl bg-white p-5 px-14 py-6 shadow-lg"
+            >
+              <img
+                class="category__img w-20 rounded-full bg-backdropBlue px-2 py-4"
+                src="/images/category 3.png"
+                alt=""
+              />
+              <h3 class="font-semibold">Sushi Combo</h3>
+              <p>(Combo of 6)</p>
+            </div>
+            <div
+              class="flex flex-col items-center rounded-2xl bg-white p-5 px-14 py-6 shadow-lg"
+            >
+              <img
+                class="category__img w-24 rounded-full bg-backdropBlue px-2 py-4"
+                src="/images/category 4.png"
+                alt=""
+              />
+              <h3 class="font-semibold">Browse All</h3>
+              <p>(255 items)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~-->
+      <section id="menu" class="py-16 md:py-20">
+        <div class="container mx-auto px-10">
+          <h2
+            class="menu__data mb-3 text-center text-sm font-semibold uppercase text-backdropRed md:text-left lg:px-10"
+          >
+            Special Dishes
+          </h2>
+
+          <div class="lg:px-10">
+            <h1 class="menu__data text-center text-3xl font-bold md:text-left">
+              Best Dishes
+            </h1>
+            <h1 class="menu__data text-center text-3xl font-bold md:text-left">
+              From Our Menu
+            </h1>
+          </div>
+
+          <div class="flex items-center justify-center gap-4 md:justify-end">
+            <ion-icon
+              class="menu__data cursor-pointer rounded-full bg-backdropGray p-4 text-gray-700"
+              name="chevron-back-outline"
+            ></ion-icon>
+            <ion-icon
+              class="menu__data cursor-pointer rounded-full bg-lightGreen p-4 text-white"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </div>
+
+          <div
+            class="flex flex-col flex-wrap items-center justify-center gap-6 md:flex-row"
+          >
+            <img
+              class="menu__data w-72 md:w-72 lg:w-96"
+              src="/images/Best Dishes Gropup -- 1.png"
+              alt=""
+            />
+            <img
+              class="menu__data w-72 md:w-72 lg:w-96"
+              src="/images/Best Dishes Group -- 2.png"
+              alt=""
+            />
+            <img
+              class="menu__data w-72 md:w-72 lg:w-96"
+              src="/images/Best Dishes Group -- 3.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Testimonies ~~~~~~~~~~~~~~~-->
+      <section id="offers" class="py-16 md:py-20">
+        <div class="container mx-auto px-10 lg:px-20">
+          <div
+            class="flex flex-col-reverse items-center gap-8 md:flex-row md:gap-[5rem] lg:gap-[5rem] lg:px-10"
+          >
+            <img
+              class="chef__data md:[300px] lg:1/2 w-[300px] md:w-1/2 lg:w-[380px]"
+              src="/images/chef.png"
+              alt=""
+            />
+
+            <div class="flex flex-col gap-9 md:w-1/2 lg:w-1/2">
+              <h3
+                class="test__data text-center font-bold uppercase text-backdropRed md:text-left"
+              >
+                Testimonials
+              </h3>
+              <h1
+                class="test__data text-center text-3xl font-bold md:text-left lg:text-4xl"
+              >
+                What Our Customers Say About Us
+              </h1>
+              <p
+                class="test__data text-center text-gray-500 md:text-left md:text-base"
+              >
+                “I had the pleasure of dining at Foodi last night, and I'm still
+                raving about the experience! The attention to detail in
+                presentation and service was impeccable”
+              </p>
+              <img
+                class="test__data w-64 cursor-pointer"
+                src="/images/Group 38.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ About Us && Services ~~~~~~~~~~~~~~~-->
+      <section id="about" class="mb-36 py-16 md:mb-28 md:py-20">
+        <div class="container mx-auto px-10">
+          <div class="flex flex-col gap-8 md:flex-row md:gap-[2rem]">
+            <div class="space-y-6 md:w-1/2">
+              <h3
+                class="about__data text-center font-bold text-backdropRed md:text-left"
+              >
+                OUR STORY & SERVICES
+              </h3>
+              <h1
+                class="about__data text-center text-3xl font-bold md:text-left lg:text-4xl"
+              >
+                Our Culinary Journey And Services
+              </h1>
+              <p
+                class="about__data mb-6 text-center text-gray-500 md:text-left md:text-base"
+              >
+                Rooted in passion, we curate unforgettable dining experiences
+                and offer exceptional services, blending culinary artistry with
+                warm hospitality.
+              </p>
+              <div class="flex items-center justify-center md:justify-start">
+                <button
+                  class="about__data mt-4 flex items-center rounded-full bg-lightGreen p-2 px-5 text-center text-white shadow-2xl duration-300 hover:-translate-y-1 md:p-2 md:px-6 md:text-left lg:p-4 lg:px-10"
+                >
+                  Explore
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-2 items-center justify-center gap-6 space-x-0 md:w-1/2"
+            >
+              <div
+                class="about__img flex flex-col items-center rounded-2xl bg-white px-2 py-5 shadow-lg"
+              >
+                <ion-icon
+                  class="h-20 w-20 font-bold text-lightGreen"
+                  name="bonfire-outline"
+                ></ion-icon>
+                <h1 class="text-sm font-bold uppercase text-lightGreen">
+                  Catering
+                </h1>
+                <p class="text-center text-[12px] md:text-sm">
+                  Delight your guests with our flavors and presentation
+                </p>
+              </div>
+              <div
+                class="about__img flex flex-col items-center rounded-2xl bg-white px-2 py-5 shadow-lg"
+              >
+                <ion-icon
+                  class="h-20 w-20 font-bold text-lightGreen"
+                  name="timer-outline"
+                ></ion-icon>
+                <h1
+                  class="text-center text-sm font-bold uppercase text-lightGreen"
+                >
+                  Fast Delivery
+                </h1>
+                <p class="text-center text-[12px] md:text-sm">
+                  We deliver your order promptly to your door as fast as
+                  possible
+                </p>
+              </div>
+              <div
+                class="about__img flex flex-col items-center rounded-2xl bg-white px-2 py-5 shadow-lg"
+              >
+                <ion-icon
+                  class="h-20 w-20 font-bold text-lightGreen"
+                  name="cart-outline"
+                ></ion-icon>
+                <h1
+                  class="text-center text-sm font-bold uppercase text-lightGreen"
+                >
+                  Online Odering
+                </h1>
+                <p class="text-center text-[12px] md:text-sm">
+                  Explore menu & order with ease using our Online Ordering
+                </p>
+              </div>
+              <div
+                class="about__img flex flex-col items-center rounded-2xl bg-white px-2 py-5 shadow-lg"
+              >
+                <ion-icon
+                  class="h-20 w-20 font-bold text-lightGreen"
+                  name="gift-outline"
+                ></ion-icon>
+                <h1 class="text-sm font-bold uppercase text-lightGreen">
+                  Gift Cards
+                </h1>
+                <p class="text-center text-[12px] md:text-sm">
+                  Give the gift of exceptional dining with Foodi Gift Cards
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+    <footer id="services" class="relative bg-lightGreen pb-10 pt-20 md:pt-28">
+      <!-- Subscribe option -->
+      <div
+        class="container absolute left-0 right-0 top-0 mx-auto -translate-y-1/2 px-10"
+      >
+        <div class="space-y-5 rounded-md bg-white px-10 pb-10 pt-5 shadow-md">
+          <h3>Subscribe to our page for more updates</h3>
+
+          <div class="flex flex-col gap-1 md:flex-row">
+            <input
+              type="email"
+              placeholder="Your Email Address"
+              class="w-full rounded-md px-5 py-3 outline-none"
+            />
+            <button
+              class="flex items-center justify-center gap-1 rounded-md bg-lightGreen px-5 py-3 duration-300 hover:opacity-80"
+            >
+              <span>Subscribe</span>
+              <ion-icon name="send-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Socials -->
+      <div class="container mx-auto mb-10 mt-16 px-10 md:mt-8">
+        <div class="relative border-b border-backdrop">
+          <div
+            class="absolute left-0 right-0 top-0 mx-auto max-w-36 -translate-y-1/2 transform"
+          >
+            <div class="space-x-2 bg-lightGreen text-center text-[24px]">
+              <ion-icon
+                class="footer__data cursor-pointer text-backdrop"
+                name="logo-facebook"
+              ></ion-icon>
+              <ion-icon
+                class="footer__data cursor-pointer text-backdrop"
+                name="logo-instagram"
+              ></ion-icon>
+              <ion-icon
+                class="footer__data cursor-pointer text-backdrop"
+                name="logo-twitter"
+              ></ion-icon>
+              <ion-icon
+                class="footer__data cursor-pointer text-backdrop"
+                name="logo-youtube"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--content  -->
+      <div
+        class="container mx-auto grid grid-cols-1 gap-8 px-10 text-center md:grid-cols-2 md:text-start lg:grid-cols-4"
+      >
+        <!-- item 1 -->
+        <div>
+          <div class="footer__data inline-block text-center text-7xl">
+            <ion-icon name="restaurant"></ion-icon>
+            <p class="font-inter text-2xl font-semibold">
+              <span
+                class="rounded-md bg-backdrop p-2 px-1 py-2 text-3xl font-bold text-lightGreen"
+                >S</span
+              >ushi.
+            </p>
+          </div>
+        </div>
+
+        <!-- item 2 -->
+        <div>
+          <p class="footer__data mb-5 text-xl font-bold">Useful Links</p>
+
+          <div class="footer__data flex flex-col gap-1">
+            <a href="#" class="font-semibold duration-300 hover:text-backdrop"
+              >About Us</a
+            >
+            <a href="#" class="font-semibold duration-300 hover:text-backdrop"
+              >Events</a
+            >
+            <a href="#" class="font-semibold duration-300 hover:text-backdrop"
+              >Blogs</a
+            >
+            <a href="#" class="font-semibold duration-300 hover:text-backdrop"
+              >FAQ</a
+            >
+          </div>
+        </div>
+
+        <!-- item 3 -->
+        <div>
+          <p class="footer__data mb-5 text-xl font-bold">Main Menu</p>
+          <div class="footer__data flex flex-col gap-1">
+            <a href="#" class="font-semibold duration-300 hover:text-backdrop"
+              >Home</a
+            >
+            <a href="#" class="font-semibold duration-300 hover:text-backdrop"
+              >Offers</a
+            >
+            <a href="#" class="font-semibold duration-300 hover:text-backdrop"
+              >Menus</a
+            >
+            <a href="#" class="font-semibold duration-300 hover:text-backdrop"
+              >Reservation</a
+            >
+          </div>
+        </div>
+
+        <!-- item 4 -->
+        <div>
+          <p class="footer__data mb-5 text-xl font-bold">Contact Us</p>
+
+          <div class="footer__data flex flex-col gap-1">
+            <a href="tel:+64 958 248 966">+64 958 248 966</a>
+            <a href="#email">example@gmail.com</a>
+            <a href="">Social Media</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-10">
+        <p class="footer__data mt-10 text-center opacity-50">
+          Copyright &copy; 2023 elmarscode | All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
+    <a
+      href="#"
+      class="fixed -bottom-1/2 right-4 z-50 inline-block rounded-md bg-backdropRed px-3 py-1 text-lg shadow-sm duration-300 hover:-translate-y-1 md:px-4 md:py-2"
+      id="scroll-up"
+    >
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </a>
+
+    <!--~~~~~~~~~~ SCROLLREVEAL ~~~~~~~~~~-->
+    <script src="/js/scrollreveal.min.js"></script>
+
+    <!-- Icon Script  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
